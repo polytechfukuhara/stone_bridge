@@ -8,5 +8,6 @@ void setup() {
 }
 
 void loop() {
+  digitalwrite(led,OUTPUT);
   
 }
