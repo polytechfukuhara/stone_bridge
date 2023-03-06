@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Mamoru Application 2</string>
+    <string name="txtWifi">WIFI接続</string>
+    <string name="txtBTH">Blutooth接続</string>
+    <string name="txtMain">通知画面</string>
+    <string name="txtOpenClose">施錠開錠状況</string>
+    <string name="txtBthOnOff">Blutoothの接続状況</string>
+    <string name="btnGo">更新</string>
+    <string name="txtOpen">開錠中</string>
+    <string name="txtClose">施錠中</string>
+    <string name="btnOk">Blutooth接続中</string>
+    <string name="bthOff">Blutooth未接続中</string>
+    <string name="bthMain">Blutooth接続設定</string>
+    <string name="id">ID</string>
+    <string name="pass">password</string>
+    <string name="correct">決定</string>
+    <string name="wifiMain">WIFI接続設定</string>
+</resources>
