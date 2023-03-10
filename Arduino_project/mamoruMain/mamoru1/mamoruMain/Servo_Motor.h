@@ -6,8 +6,8 @@ class Servo_Motor
   
   public:
   
-  void write(AMOUNT);
-  int read();
-  void attach(MOTOR_OUTPUTPIN);
+  void ledcwrite(AMOUNT);
+  int ledcread();
+  void ledcattach(MOTOR_OUTPUTPIN);
   
 };

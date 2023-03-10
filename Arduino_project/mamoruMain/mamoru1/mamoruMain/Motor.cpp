@@ -29,7 +29,7 @@ void lock__door(){
 }
 
 boolean getLockState(){
-  lock_read_num = int read();
+  lock_read_num = int ledcread();
 
   if(lock_read_num==LOCK_AMOUNT){
     lockFlg ==true;

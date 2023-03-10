@@ -25,10 +25,10 @@
 #include"Sleep_mode.h
 #include "esp32-hal-ledc.h"
 
-boolean lockFlg;
+int lockNum;
 
-int Servo_Motor::read(){
-  return lockFlg;
+int Servo_Motor::ledcread(){
+  return lockNum;
 }
 
 
@@ -45,7 +45,7 @@ Servo_Motor::openKey(){
     ledcWrite(1, i);
     delay(50);
   }
-  lockFlg = false;  // 開錠時は0
+  lockNum = OPEN_AMOUNT;  // 開錠時は0
     
 } 
 
@@ -54,7 +54,7 @@ Servo_Motor::croseKey(){
     ledcWrite(1, i);
     delay(50);
   }
-  lockFlg = true;  // 施錠時は1    
+  lockNum = LOCK_AMOUNT;  // 施錠時は1    
 } 
 
 
