@@ -11,23 +11,25 @@
 #include"Motor.h"
 #include"Sensor.h"
 #include"Battery.h"
+#include"Servo_Motor.h"
 #include"Blutooth.h"
 #include"connectWifi.h"
 #include"Sleep_mode.h"
+#include"Sleep_mode.h"
 
 //インスタンス
-Servo myservo;
+Servo_Motor myservo;
 
 void open_door(){
-  write(OPEN_AMOUNT); 
+  myservo.openKey(); 
 }
 
 void lock__door(){
-  write(LOCK_AMOUNT); 
- }
+  myservo.croseKey(); 
+}
 
 boolean getLockState(){
-  lock_read_num = int read();
+  lock_read_num = int ledcread();
 
   if(lock_read_num==LOCK_AMOUNT){
     lockFlg ==true;
