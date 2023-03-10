@@ -17,3 +17,22 @@
 
 //インスタンス
 Servo myservo;
+
+void open_door(){
+  write(OPEN_AMOUNT); 
+}
+
+void lock__door(){
+  write(LOCK_AMOUNT); 
+ }
+
+boolean getLockState(){
+  lock_read_num = int read();
+
+  if(lock_read_num==LOCK_AMOUNT){
+    lockFlg ==true;
+  }else{
+    lockFlg ==false;
+  }
+  return lockFlg;
+}
