@@ -27,3 +27,20 @@ Button::Button(int button_pin, BTN_MODE mode, void* function) {
 int Button::Read() {
   return digitalRead(m_bth_pin);
 }
+
+
+
+
+void Button::Read() {
+  if (BTN_MODE == BtnA_mode) {
+    Button.HomeRead();
+  } else {
+    Button.RightRead();
+  }
+}
+int Button::HomeRead() {
+  return M5.BtnA.wasPressed();
+}
+int Button::RightRead() {
+  return M5.BtnB.wasPressed();
+}
